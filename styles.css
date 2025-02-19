@@ -14,6 +14,7 @@ body {
 }
 
 .container {
+    width: 100%;
     max-width: 800px;
     margin: 20px;
     padding: 40px;
@@ -54,14 +55,6 @@ body {
 /* Secciones */
 section {
     margin: 50px 0;
-    text-align: center;
-}
-
-h3 {
-    font-size: 2rem;
-    color: #cc9b16;
-    margin-bottom: 20px;
-    font-weight: bold;
     text-align: center;
 }
 
@@ -119,12 +112,6 @@ a:hover {
     transform: scale(1.05);
 }
 
-.decorado {
-    width: 100%;
-    text-align: center;
-    margin: 20px 0;
-}
-
 .decorado img {
     max-width: 100%; /* Asegura que la imagen no sobresalga */
     height: auto;
@@ -132,43 +119,58 @@ a:hover {
     margin: 0 auto;
 }
 
-.resolucion {
-    width: 99%;
-    text-align: center;
-}
-
-
-/**Movil**/
-
+/* Estilos para móviles */
 @media (max-width: 767px) {
-    .desktop {
-        display: none;
+    body {
+        padding: 10px; /* Añade espacio alrededor del contenido */
+        min-height: auto; /* Evita que el body ocupe toda la pantalla */
     }
-    .tablet {
-        display: none;
+
+    .container {
+        width: 100%; /* Ocupa todo el ancho disponible */
+        margin: 0; /* Elimina márgenes */
+        padding: 15px; /* Reduce el padding */
+        border-radius: 0; /* Elimina bordes redondeados */
+        box-shadow: none; /* Elimina sombras */
+    }
+
+    .header h1 {
+        font-size: 2.5rem; /* Reduce el tamaño de la fuente */
+    }
+
+    .header h2 {
+        font-size: 1.8rem; /* Reduce el tamaño de la fuente */
+    }
+
+    .header p {
+        font-size: 1.1rem; /* Reduce el tamaño de la fuente */
+    }
+
+    h4 {
+        font-size: 3.5rem; /* Reduce el tamaño de la fuente */
+    }
+
+    p {
+        font-size: 1rem; /* Reduce el tamaño de la fuente */
+    }
+
+    .buttons {
+        flex-direction: column; /* Apila los botones verticalmente */
+        gap: 10px; /* Reduce el espacio entre botones */
+    }
+
+    .btn {
+        width: 100%; /* Haz que los botones ocupen todo el ancho */
+        font-size: 1rem; /* Reduce el tamaño de la fuente */
+    }
+
+    .decorado img {
+        max-width: 90%; /* Ajusta el tamaño de las imágenes */
     }
 }
-
-
-/**Tablet**/
-
+/* Estilos para tabletas */
 @media (min-width: 768px) and (max-width: 990px) {
-    .desktop {
-        display: none;
-    }
-    .movil {
-        display: none;
-    }
-}
-
-
-/**Escritorio**/
-
-@media (min-width: 991px) {
-    .tablet {
-        display: none;
-    }
-    .movil {
-        display: none;
+    .container {
+        max-width: 90%;
     }
 }
